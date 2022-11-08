@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital@1&family=Inter&display=swap');
+*{
+    margin: 0;
+    font-family: 'Finlandica', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-image: linear-gradient(to right top, #f8f8f8, #f9f9f9, #fafbfa, #fcfcfc, #fdfdfd, #f0edf6, #e5dcee, #dccbe5, #cda2c9, #c378a4, #b64c77, #a41245);   
+}
+.black{
+    background-color: black;
+}
+
+.half-circle{
+    width: 400px;
+    height: 200px;
+    background-color: #A41245;
+    border-bottom-left-radius: 90px;  
+    border-bottom-right-radius: 250px; 
+    border: 10px solid #121212;
+    border-bottom: 0;
+    margin-top: 500px;
+}
+.slider{
+    width: 400px;
+    margin-top: -420px;
+}
+#title{
+    height: 40px;
+ 
+}
+
+.header{
+    height: 150px;
+    width: 80%;
+    display: flex;
+    position: fixed;
+    transition: .32s ease-in-out;
+    padding: 30px 10% 0px 10%;
+    z-index: 9999;
+}
+.onscroll{
+    padding: 10px 10%;
+    background-color: #121212;
+}
+
+
+.logo, .menu, .socialmediaicons{
+    padding: 30px;
+    color: white;
+}
+
+.logo{
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 10px;
+}
+.logo span{
+    letter-spacing: 10px;
+    color: #A41245;
+    font-weight: 800;
+    font-size: 30px;
+    background: none;
+}
+.menu{
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+}
+.menus{
+    font-size: 25px;
+    
+}
+.socialmediaicons{
+    width: 35%;
+}
