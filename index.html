@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -13,16 +14,21 @@
 
 <div id="header" class="header">
     <div class="logo">
-        <h1>Arlind's</h1><span>PORTFOLIO</span>
+        <h1 onclick="scrollIn('home')">Arlind's</h1><span onclick="scrollIn('home')">PORTFOLIO</span>
     </div>
 
 
-        <div class="socialmediaicons"></div>
+        <div class="socialmediaicons">
+            <a target="_blank" href="https://www.facebook.com/arlindaliu123" class="fa fa-facebook"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/arlind-aliu-393a88204/" class="fa fa-linkedin"></a>
+            <a target="_blank" href="https://instagram.com/arlindaliuu"  class="fa fa-instagram"></a>
+            <button id="connectbutton" onclick="scrollIn(this.id)">Let's Connect</button>
+        </div>
         <div class="menu">
-            <div class="menus" id="home">Home</div>
-            <div class="menus" id="skills">Skills</div>
-            <div class="menus" id="projects">Projects</div>
-            <div class="menus" id="aboutme">About Me</div>
+            <div class="menus" id="home" onclick="scrollIn(this.id)">Home</div>
+            <div class="menus" id="skills" onclick="scrollIn(this.id)">Skills</div>
+            <div class="menus" id="projects" onclick="scrollIn(this.id)">Projects</div>
+            <div class="menus" id="aboutme" onclick="scrollIn(this.id)">About Me</div>
             </div>
     </div>
     </header>
@@ -259,8 +265,32 @@ I am presenting some projects that I have done during my short career as a progr
             Im a person who is ambitious and determined. I always tried to get a chance to improve myself. I am a organized person and every time I take various techniques to study and to make my work done. Also i'm very friendly and I enjoy interacting with others. It is nothing for me to have a conversation with strangers, I'm always comfortable with any of those. I want take risks and responsibility. Till now I have always been a leader to my school team and that was the reason which pushed me to become independent and persistent for myself also. My primary goal is to focus on result and moving toward with necessary steps.        </p>
     </div>
     <!---Contact  Form-->
-
-    
+    <div id="contact-div">
+        <div class="absolutep">
+            <img src="./assets/img/rocket.png" alt="">
+        </div>
+        <h1 class="h1-div">Get In Touch</h1>
+        <form class="contactform">
+            <input type="text" placeholder="First Name"/>
+            <input type="text" placeholder="Last Name"/>
+            <input type="text" placeholder="Email Address"/>
+            <input type="text" placeholder="Phone No."/>
+            <input type="text" placeholder="Message"/>
+            <input type="button" value="Send Message">
+        </form>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="logo">
+            <h1 onclick="scrollIn('home')">Arlind's</h1><span onclick="scrollIn('home')">PORTFOLIO</span>
+        </div>
+        <div class="social-media">
+            <a target="_blank" href="https://facebook.com/arlindaliu123" class="fa mt-50 fa-facebook"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/arlind-aliu-393a88204/" class="fa mt-50 fa-linkedin"></a>
+            <a target="_blank" href="https://instagram.com/arlindaliuu" class="fa mt-50 fa-instagram"></a>
+            <p class="s-b-paragraph mtop">Copyright 2022. All Rights Reserved</p>
+        </div>
+    </footer>
         <script src="./assets/js/script.js"></script>
 </body>
 </html>

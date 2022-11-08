@@ -103,3 +103,29 @@
             }
             
         }
+
+
+        let scrollToAbout = document.querySelector('#aboutme-div')
+        let scrollToSkills = document.querySelector('#skillsdiv')
+        let scrollToContact = document.querySelector('#contact-div')
+        let scrollToProjects = document.querySelector('#projects-div')
+        let scrollToHome = document.querySelector('#banner')
+
+        function scrollIn(param){
+            if(param == 'aboutme'){
+            scrollToAbout.scrollIntoView({behavior:'smooth'})
+            }
+            if(param == 'skills'){
+                scrollToSkills.scrollIntoView({behavior:'smooth'})
+            }
+            if(param == 'projects'){
+                scrollToProjects.scrollIntoView({behavior:'smooth'})
+            }
+            if(param == 'connectbutton'){
+                scrollToContact.scrollIntoView({behavior:'smooth'})
+           }
+           if(param == 'home'){
+            scrollToHome.scrollIntoView({behavior:'smooth'})
+       }
+            
+        }

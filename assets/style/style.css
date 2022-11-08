@@ -11,6 +11,14 @@ body{
 .black{
     background-color: black;
 }
+#connectbutton{
+    width: 170px;
+    height: 50px;
+    margin-left: 70px;
+    border: 1px solid #ECEAED;
+    background-color: transparent;
+    color: white;
+}
 
 .half-circle{
     width: 500px;
@@ -344,9 +352,9 @@ input {
     margin-top: 40px;
 }
 .tabs{
-    color: black;
+    color: white;
     margin-left: 50px;
-    background-color: white;
+    background-color: #A41245;
     width: 200px;
     height: 50px;
     text-align: center;
@@ -388,3 +396,96 @@ input {
     width: 100%;
     margin-top: 90px;
   }
+  /*Contact Form */
+  #contact-div{
+    margin: 0 auto;
+    width: 50%;
+    height: 800px;
+    margin-top: 150px;
+    border: 1px solid #ECEAED;
+  }
+  .contactform{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 40px;
+    
+  }
+  .contactform input{
+    margin:  0 auto;
+    display: block;
+    width: 80%;
+    height: 60px;
+    background-color: white;
+    margin-top: 100px;
+    background: hsla(0,0%,100%,.1);
+    border: 1px solid hsla(0,0%,100%,.5);
+    transition: .3s ease-in-out;
+    color: white;
+    font-size: 19px;
+  }
+  .contactform input:focus{
+    background-color: white;
+    color: black;
+  }
+  .contactform :nth-child(5){
+        height: 200px;
+  }
+  .contactform :nth-child(6){
+    margin-top: 150px;
+    width: 60%;
+    background-color: #121212;
+    border: none;
+    color: white;
+  }
+  .absolutep{
+    position: absolute;
+    animation: rocektanimation 4s linear infinite;
+    transform: rotate(125deg);
+  }
+  
+  @keyframes rocektanimation{
+    0% {
+        left: 0;
+      }
+      50%{
+        left: 50%;
+      }
+      100% {
+        left: 100%;
+      }
+      
+  }
+
+  /* footer */
+  footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-color: #121212;
+    margin-top: 100px;
+  }
+  .fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid #ECEAED;
+    margin-left: 20px;
+    background: #121212;
+    color: white;
+    
+  }
+  .mt-50{
+    margin-top: 50px;
+  }
+  .mtop{
+    margin-top: 10px;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  
