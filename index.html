@@ -18,7 +18,6 @@
 
 
         <div class="socialmediaicons"></div>
-
         <div class="menu">
             <div class="menus" id="home">Home</div>
             <div class="menus" id="skills">Skills</div>
@@ -26,21 +25,242 @@
             <div class="menus" id="aboutme">About Me</div>
             </div>
     </div>
-
-
-
-
-
     </header>
+    <!--Banner-->
+        <section>
+        <div id="banner">
+            <div class="bannerphoto">
+                <div class="half-circle">
+                    <img class="slider" src="./assets/img/photo.png"  />
+                    <img class="slider" src="./assets/img/photo1.png" />
+                </div>
+            </div>
+            
+            <div class="bannerbio">
+                <p class="b-paragraph">Hi! I'm Arlind <span id="title"></span></p>
+                <p class="s-b-paragraph">
+                    Hi! I'm Arlind, person who has passion about learning new things. Since kid I was in love with computers getting involved and seeing new technologies. I'm a hardworking person who believes the technological advancements and importance of coding. Currently following lessons in the faculty of Computer Science and Engineering and attending some courses and also working on self-learning courses.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <p id="title"></p>
+    <!--Skills Section-->
+    <section id="skillsdiv">
+        <h1 class="h1-div">Skills</h1>
+        <div class="container">
+
+
+            <input type="radio" name="slider" class="d-none" id="s1" checked>
+            <input type="radio" name="slider" class="d-none" id="s2">
+            <input type="radio" name="slider" class="d-none" id="s3">
+            <input type="radio" name="slider" class="d-none" id="s4">
+            <input type="radio" name="slider" class="d-none" id="s5">
         
-        <div class="half-circle">
-            <img class="slider" id="slideshow" />
+            <div class="cards">
+              <label for="s1" id="slide1">
+                <div class="card">
+                  <div class="image">
+                    <img src="./assets/img/meter1.svg" alt="">
+                   
+                  </div>
+                  <div class="infos">
+                    <span class="name">Wordpress & WoCommerce
+                    </span>
+                    
+                  </div>
+                  <a href="/contact" class="btn-contact">details</a>
+                </div>
+              </label>
+        
+              <label for="s2" id="slide2">
+                <div class="card">
+                  <div class="image">
+                    <img src="./assets/img/meter2.svg" alt="">
+                  </div>
+                  <div class="infos">
+                    <span class="name">Java & <br> C#
+                    </span>
+                  </div>
+                  <a href="/contact" class="btn-contact">details</a>
+                </div>
+              </label>
+        
+              <label for="s3" id="slide3">
+                <div class="card">
+                  <div class="image">
+                    <img src="./assets/img/meter3.svg" alt="">
+                  </div>
+                  <div class="infos">
+                    <span class="name">SQL & <br> MSSQL
+                    </span>
+                  </div>
+                  <a href="/contact" class="btn-contact">details</a>
+                </div>
+              </label>
+        
+              <label for="s4" id="slide4">
+                <div class="card">
+                  <div class="image">
+                    <img src="./assets/img/meter3.svg" alt="">
+                  </div>
+                  <div class="infos">
+                    <span class="name">HTML & <br> CSS
+                    </span>
+                  </div>
+                  <a href="/contact" class="btn-contact">details</a>
+                </div>
+              </label>
+        
+              <label for="s5" id="slide5">
+                <div class="card">
+                  <div class="image">
+                    <img src="./assets/img/meter3.svg" alt="">
+                  </div>
+                  <div class="infos">
+                    <span class="name">JavaScript & PHP & ReactJS
+                </span>
+                  </div>
+                  <a href="/contact" class="btn-contact">details</a>
+                </div>
+              </label>
+            </div>
+          </div>
+        </body>
+        </html>
+    </section>
+
+    <!--Projects-->
+    <section id="projects-div">
+        <h1 v>Projects</h1>
+        <p id="skillsp" class="s-b-paragraph">
+            Love to code. Love to waste time on doing projects made me a better coder.
+I am presenting some projects that I have done during my short career as a programmer. They are made for school projects, made during the course as Full-Stack Web Developer, and personal projects. You can see them in several different tabs as follows.
+
+        </p>
+
+        <div class="projectstabs">
+            <div class="tabs" id="tab-0" onclick="changeTab(this.id)">Project 1</div>
+            <div class="tabs" id="tab-1" onclick="changeTab(this.id)">Project 2</div>
+            <div class="tabs" id="tab-2" onclick="changeTab(this.id)">Project 3</div>
+            <div class="tabs" id="tab-3" onclick="changeTab(this.id)">Project 4</div>
         </div>
-        <div class="half-circle">
-            <img src="./assets/img/photo.png" alt="">
+        <div class="projects">
+            <p id="projectp" class="s-b-paragraph">
+                Using Wordpress to create websites was my first step on the programming world. I made some projects earlier but the one who is more special is my official Dropshipping website which is created by Wordpress and WoCommerce. This site is using AliDropship Plugin from which it recieves the product data. You can also check the website clicking on this <a href="https://www.purchasetime.net" target="_blank">link</a> or you can see the photos of website down below.
+            </p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="./assets/img/project-img12.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img13.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img14.PNG" />
+                </div>  
+                <div class="grid-item">
+                    <img src="./assets/img/project-img15.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img16.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img17.PNG" />
+                </div>  
+              </div>
         </div>
+        <div class="projects d-none">
+            <p id="projectp" class="s-b-paragraph">
+                Improving my coding experience was doing and following Bootcamp 5 course projects which was a big step forward for me. The project in question was created by HTML, Css and JavaScript. It is a website for selling food products. This project will be a real project for one of mine personal clients in the near future.
+            </p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="./assets/img/project-img6.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img7.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img8.PNG" />
+                </div>  
+                <div class="grid-item">
+                    <img src="./assets/img/project-img9.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img10.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img11.PNG" />
+                </div>  
+              </div>
+        </div>
+        <div class="projects d-none">
+            <p id="projectp" class="s-b-paragraph">
+                Corresponding project is made on the third semester. It was an e-commerce website which I have finished implementing technologies that I have learned in school. The front-end is made by using HTML, CSS, JavaScript and back-end using PHP and SQL as a database. You can see some page examples down there.
+            </p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="./assets/img/project-img1.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img2.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img3.PNG" />
+                </div>  
+                <div class="grid-item">
+                    <img src="./assets/img/project-img4.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img5.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img17.PNG" />
+                </div>  
+              </div>
+        </div>
+        <div class="projects d-none">
+            <p id="projectp" class="s-b-paragraph">
+                This is a portfolio site which I created during Bootcamp lessons. It is 
+                also hosted which you can check it <a target="_blank" href="https://arlindsportfolio.com">by clickin' here</a>. 
+                This portfolio is created using ReactJS and Bootstrap.
+            </p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="./assets/img/project-img18.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img19.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img20.PNG" />
+                </div>  
+                <div class="grid-item">
+                    <img src="./assets/img/project-img21.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img22.PNG" />
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/img/project-img23.PNG" />
+                </div>  
+              </div>
+        </div>
+    </section>
+
+    <!---About me-->
+    <div id="aboutme-div">
+        <h1 class="h1-div"> About Me</h1>
+        <p id="projectp" class="s-b-paragraph">
+
+            I completed primary school in my hometown in the city of Presheva, as well as high school. I started my higher studies in 2020 in Prishtina at the Faculty of Computer Science and Engineering.
+
+            Im a person who is ambitious and determined. I always tried to get a chance to improve myself. I am a organized person and every time I take various techniques to study and to make my work done. Also i'm very friendly and I enjoy interacting with others. It is nothing for me to have a conversation with strangers, I'm always comfortable with any of those. I want take risks and responsibility. Till now I have always been a leader to my school team and that was the reason which pushed me to become independent and persistent for myself also. My primary goal is to focus on result and moving toward with necessary steps.        </p>
+    </div>
+    <!---Contact  Form-->
+
+    
         <script src="./assets/js/script.js"></script>
 </body>
 </html>
