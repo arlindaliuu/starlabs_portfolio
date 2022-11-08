@@ -113,19 +113,19 @@
 
         function scrollIn(param){
             if(param == 'aboutme'){
-            scrollToAbout.scrollIntoView({behavior:'smooth'})
+            scrollToAbout.scrollIntoView({behavior:'smooth', block: "end"})
             }
             if(param == 'skills'){
-                scrollToSkills.scrollIntoView({behavior:'smooth'})
+                scrollToSkills.scrollIntoView({behavior:'smooth', block: "end"})
             }
             if(param == 'projects'){
-                scrollToProjects.scrollIntoView({behavior:'smooth'})
+                scrollToProjects.scrollIntoView({behavior:'smooth', block: "start"})
             }
             if(param == 'connectbutton'){
-                scrollToContact.scrollIntoView({behavior:'smooth'})
+                scrollToContact.scrollIntoView({behavior:'smooth', block: "end"})
            }
            if(param == 'home'){
-            scrollToHome.scrollIntoView({behavior:'smooth'})
+            scrollToHome.scrollIntoView({behavior:'smooth', block: "end"})
        }
             
         }
