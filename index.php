@@ -36,6 +36,7 @@ session_start();
             <a target="_blank" href="https://www.linkedin.com/in/arlind-aliu-393a88204/" class="fa fa-linkedin"></a>
             <a target="_blank" href="https://instagram.com/arlindaliuu"  class="fa fa-instagram"></a>
             <button id="connectbutton" onclick="scrollIn(this.id)">Let's Connect</button>
+            
         </div>
         <div class="menu">
             <div class="menus" id="home" onclick="scrollIn(this.id)">Home</div>
