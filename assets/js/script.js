@@ -138,13 +138,6 @@
             './assets/img/background1.jpg',
             './assets/img/background2.jpg'
         ]
-        var randomPhoto = backgroundArray[Math.floor(Math.random() * backgroundArray.length)]
-        
-        document.body.style.backgroundImage = 'url('+randomPhoto+')';
-
-
-        //redirect to login
-        function loginRedirect(){
-            window.location.href = 'dashboard.php'
-        }
+            var randomPhoto = backgroundArray[Math.floor(Math.random() * backgroundArray.length)]
+            document.body.style.backgroundImage = 'url('+randomPhoto+')';
 

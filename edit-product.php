@@ -1,13 +1,19 @@
-
 <?php
 require_once './controllers/ControllerMenu.php';
-
+session_start();
+//Creating an instance.
 $menu = new ControllerMenu;
+//Calling a method editUser() and sending an id.
 $currentUser = $menu->editUser($_GET['id']);
-
+//Check if form is submited then call update() method.
 if (isset($_POST['submit'])) {
     $menu->update($_POST, $_GET['id']);
 }
+//Check if SESSION = 1. Only admin has role number 1 and he's the only one who can be accessed there.
+if ($_SESSION['Roli'] != 1) {
+    header("Location: login.php");
+    die();
+  }
 
 ?>
 

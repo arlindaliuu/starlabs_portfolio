@@ -1,8 +1,9 @@
-
 <?php 
 require_once './controllers/ControllerMenu.php';
 session_start();
+    //Creating an instance.
     $controller = new ControllerMenu;
+    //Checkin' if form is submitet then calling method insertContactForm().
     if(isset($_POST['submit'])){
         $controller->insertContactForm($_POST);
     }
@@ -20,7 +21,7 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Arlind's Portfolio</title>
 </head>
-<body>
+<body class="bodyclass">
     <!--Header-->
     <header>
 
@@ -41,7 +42,6 @@ session_start();
             <div class="menus" id="skills" onclick="scrollIn(this.id)">Skills</div>
             <div class="menus" id="projects" onclick="scrollIn(this.id)">Projects</div>
             <div class="menus" id="aboutme" onclick="scrollIn(this.id)">About Me</div>
-            <div class="menus" id="dashboard" onclick="loginRedirect()">Admin Dashboard</div>
         </div>
     </div>
     </header>
@@ -161,7 +161,7 @@ session_start();
 
     <!--Projects-->
     <section class="animate__animated animate__backInDown" id="projects-div">
-        <h1 class="h1-div">Projects</h1>
+        <h1 class="pt-100 h1-div">Projects</h1>
         <p id="skillsp" class="s-b-paragraph">
             Love to code. Love to waste time on doing projects made me a better coder.
 I am presenting some projects that I have done during my short career as a programmer. They are made for school projects, made during the course as Full-Stack Web Developer, and personal projects. You can see them in several different tabs as follows.
@@ -302,13 +302,13 @@ I am presenting some projects that I have done during my short career as a progr
     </div>
     <!--Footer-->
     <footer>
-        <div class="logo">
+        <div class="logo w-100">
             <h1 onclick="scrollIn('home')">Arlind's</h1><span onclick="scrollIn('home')">PORTFOLIO</span>
         </div>
         <div class="social-media">
-            <a target="_blank" href="https://facebook.com/arlindaliu123" class="fa mt-50 fa-facebook"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/arlind-aliu-393a88204/" class="fa mt-50 fa-linkedin"></a>
-            <a target="_blank" href="https://instagram.com/arlindaliuu" class="fa mt-50 fa-instagram"></a>
+            <a target="_blank" href="https://facebook.com/arlindaliu123" class="fa mt-50 mt-0 fa-facebook"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/arlind-aliu-393a88204/" class="fa mt-50 mt-0 fa-linkedin"></a>
+            <a target="_blank" href="https://instagram.com/arlindaliuu" class="fa mt-50 mt-0 fa-instagram"></a>
             <p class="s-b-paragraph mtop">Copyright 2022. All Rights Reserved</p>
         </div>
         <?php endforeach; ?>

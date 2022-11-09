@@ -1,13 +1,22 @@
 <?php
 require_once ('./config/database.php');
+
+    //Controller Class.
     class ControllerMenu
     {
         public $db;
 
+        //Constructor.
         public function __construct()
         {
             $this->db = new Database;
         }
+
+        //CRUD OPERATIONS 
+
+        //Contact form 
+
+        //Create 
         public function insertContactForm($request){
             $query = $this->db->pdo->prepare('INSERT INTO contact (Emri, Mbiemri, Email, NumriTel, Mesazhi) VALUES (:Emri, :Mbiemri, :Email, :NumriTel, :Mesazhi)');
             $query->bindParam(':Emri', $request['emri']);
@@ -19,11 +28,15 @@ require_once ('./config/database.php');
             $query->execute();
             
         }
+
+        //Read
         public function getUser()
         {
             $admins = $this->db->pdo->query('SELECT * FROM user');
             return $admins->fetchAll();
         }
+
+        //Fetching user data
         public function editUser($id)
         {
             $query = $this->db->pdo->prepare('SELECT * from user Where id = :id');
@@ -31,6 +44,8 @@ require_once ('./config/database.php');
             $query->execute();
             return $query->fetch();
         }
+
+        //Update
         public function update($request, $id)
         {
             $query = $this->db->pdo->prepare('UPDATE user SET Emri = :Emri, Mbiemri = :Mbiemri, Email = :Email, Mosha = :Mosha, Bio = :Bio, Roli = :Roli, RethMeje = :RethMeje WHERE ID = :id');
@@ -45,6 +60,8 @@ require_once ('./config/database.php');
             $query->execute();
             return header('Location: ./dashboard.php');
         }
+
+        //Delete
         public function delete($id)
         {
             $query = $this->db->pdo->prepare('DELETE from user where id = :id');
@@ -52,6 +69,8 @@ require_once ('./config/database.php');
             $query->execute();
             return header('Location: ./dashboard.php');
         }
+
+        //Validate admin credentials
         function validateData($email, $password)
         {
     
