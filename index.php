@@ -41,7 +41,7 @@ session_start();
             <div class="menus" id="skills" onclick="scrollIn(this.id)">Skills</div>
             <div class="menus" id="projects" onclick="scrollIn(this.id)">Projects</div>
             <div class="menus" id="aboutme" onclick="scrollIn(this.id)">About Me</div>
-            <!-- <div class="menus" id="dashboard" onclick="">Admin Dashboard</div> -->
+            <div class="menus" id="dashboard" onclick="loginRedirect()">Admin Dashboard</div>
         </div>
     </div>
     </header>

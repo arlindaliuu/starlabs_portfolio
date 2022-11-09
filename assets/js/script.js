@@ -1,4 +1,4 @@
-
+// Ticker
         const welcomeArr = ["Junior Web Developer", "Welcome to my portfolio"];
         var x = document.getElementById('title');
         let text = '';
@@ -51,7 +51,7 @@
 
 
         
-        
+        // Personal Profile Photo slider
         var i = 0;
         
         function ndrroImg() {
@@ -72,6 +72,7 @@
         }
         document.body.addEventListener('load', ndrroImg());
 
+        // Changing projects
 
         function changeTab(param){
             let project = document.getElementsByClassName('projects')
@@ -104,16 +105,12 @@
             
         }
 
-
+// menu buttons scrolling on specific sections
         let scrollToAbout = document.querySelector('#aboutme-div')
         let scrollToSkills = document.querySelector('#skillsdiv')
         let scrollToContact = document.querySelector('#contact-div')
         let scrollToProjects = document.querySelector('#projects-div')
         let scrollToHome = document.querySelector('#banner')
-
-        if(scrollToAbout.scrollIntoView(true)){
-            scrollToAbout.classList.add('animate__animated animate__flipInY')
-        }
 
         function scrollIn(param){
             if(param == 'aboutme'){
@@ -144,3 +141,10 @@
         var randomPhoto = backgroundArray[Math.floor(Math.random() * backgroundArray.length)]
         
         document.body.style.backgroundImage = 'url('+randomPhoto+')';
+
+
+        //redirect to login
+        function loginRedirect(){
+            window.location.href = 'dashboard.php'
+        }
+

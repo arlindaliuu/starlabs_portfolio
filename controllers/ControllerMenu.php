@@ -52,6 +52,20 @@ require_once ('./config/database.php');
             $query->execute();
             return header('Location: ./dashboard.php');
         }
+        function validateData($email, $password)
+        {
+    
+    
+            $allUsers = $this->db->pdo->query("SELECT Email, Password, Roli FROM user where '$email' = Email and '$password' = Password");
+            foreach ($allUsers as $user) {
+                if ($user['Email'] == $email && $user['Password'] == $password) {
+                    $_SESSION['Roli'] = $user['Roli'];
+                    $_SESSION['email'] = $user['Email'];
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 
 ?>

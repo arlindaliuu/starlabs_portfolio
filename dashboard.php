@@ -2,7 +2,10 @@
 require_once './controllers/ControllerMenu.php';
 session_start();
 
-
+if ($_SESSION['Roli'] != 1) {
+  header("Location: login.php");
+  die();
+}
 ?>
 
 <!DOCTYPE html>
