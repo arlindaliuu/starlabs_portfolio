@@ -111,6 +111,10 @@
         let scrollToProjects = document.querySelector('#projects-div')
         let scrollToHome = document.querySelector('#banner')
 
+        if(scrollToAbout.scrollIntoView(true)){
+            scrollToAbout.classList.add('animate__animated animate__flipInY')
+        }
+
         function scrollIn(param){
             if(param == 'aboutme'){
             scrollToAbout.scrollIntoView({behavior:'smooth', block: "end"})
@@ -129,3 +133,14 @@
        }
             
         }
+
+        //Random body background
+
+        var backgroundArray = [
+            './assets/img/background.jpg',
+            './assets/img/background1.jpg',
+            './assets/img/background2.jpg'
+        ]
+        var randomPhoto = backgroundArray[Math.floor(Math.random() * backgroundArray.length)]
+        
+        document.body.style.backgroundImage = 'url('+randomPhoto+')';

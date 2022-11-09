@@ -1,12 +1,24 @@
+
+<?php 
+require_once './controllers/ControllerMenu.php';
+session_start();
+    $controller = new ControllerMenu;
+    if(isset($_POST['submit'])){
+        $controller->insertContactForm($_POST);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?v=<?php echo time(); ?>"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Arlind's Portfolio</title>
 </head>
 <body>
     <!--Header-->
@@ -29,24 +41,35 @@
             <div class="menus" id="skills" onclick="scrollIn(this.id)">Skills</div>
             <div class="menus" id="projects" onclick="scrollIn(this.id)">Projects</div>
             <div class="menus" id="aboutme" onclick="scrollIn(this.id)">About Me</div>
-            </div>
+            <!-- <div class="menus" id="dashboard" onclick="">Admin Dashboard</div> -->
+        </div>
     </div>
     </header>
     <!--Banner-->
         <section>
         <div id="banner">
             <div class="bannerphoto">
-                <div class="half-circle">
+                <div class="half-circle animate__animated animate__bounceInUp"">
                     <img class="slider" src="./assets/img/photo.png"  />
                     <img class="slider" src="./assets/img/photo1.png" />
                 </div>
             </div>
+            <?php
+                $controller = new ControllerMenu;
+                $allData = $controller->getUser();
+               foreach($allData as $data) : ?>
             
-            <div class="bannerbio">
-                <p class="b-paragraph">Hi! I'm Arlind <span id="title"></span></p>
+            <div class="bannerbio animate__animated animate__heartBeat">
+                <p class="b-paragraph">Hi! I'm <?php echo $data['Emri'] ?> <span id="title"></span></p>
+
+                
+
+                
                 <p class="s-b-paragraph">
-                    Hi! I'm Arlind, person who has passion about learning new things. Since kid I was in love with computers getting involved and seeing new technologies. I'm a hardworking person who believes the technological advancements and importance of coding. Currently following lessons in the faculty of Computer Science and Engineering and attending some courses and also working on self-learning courses.
+                 <?php echo $data['Bio']; ?>
                 </p>
+                
+                
             </div>
         </div>
     </section>
@@ -64,7 +87,7 @@
             <input type="radio" name="slider" class="d-none" id="s5">
         
             <div class="cards">
-              <label for="s1" id="slide1">
+              <label  for="s1" id="slide1">
                 <div class="card">
                   <div class="image">
                     <img src="./assets/img/meter1.svg" alt="">
@@ -75,7 +98,7 @@
                     </span>
                     
                   </div>
-                  <a href="/contact" class="btn-contact">details</a>
+                  <a class="btn-contact">details</a>
                 </div>
               </label>
         
@@ -88,7 +111,7 @@
                     <span class="name">Java & <br> C#
                     </span>
                   </div>
-                  <a href="/contact" class="btn-contact">details</a>
+                  <a class="btn-contact">details</a>
                 </div>
               </label>
         
@@ -101,7 +124,7 @@
                     <span class="name">SQL & <br> MSSQL
                     </span>
                   </div>
-                  <a href="/contact" class="btn-contact">details</a>
+                  <a class="btn-contact">details</a>
                 </div>
               </label>
         
@@ -114,7 +137,7 @@
                     <span class="name">HTML & <br> CSS
                     </span>
                   </div>
-                  <a href="/contact" class="btn-contact">details</a>
+                  <a class="btn-contact">details</a>
                 </div>
               </label>
         
@@ -127,7 +150,7 @@
                     <span class="name">JavaScript & PHP & ReactJS
                 </span>
                   </div>
-                  <a href="/contact" class="btn-contact">details</a>
+                  <a class="btn-contact">details</a>
                 </div>
               </label>
             </div>
@@ -137,7 +160,7 @@
     </section>
 
     <!--Projects-->
-    <section id="projects-div">
+    <section class="animate__animated animate__backInDown" id="projects-div">
         <h1 class="h1-div">Projects</h1>
         <p id="skillsp" class="s-b-paragraph">
             Love to code. Love to waste time on doing projects made me a better coder.
@@ -252,17 +275,15 @@ I am presenting some projects that I have done during my short career as a progr
                     <img src="./assets/img/project-img23.PNG" />
                 </div>  
               </div>
+              
         </div>
     </section>
 
     <!---About me-->
     <div id="aboutme-div">
-        <h1 class="h1-div"> About Me</h1>
+        <h1 class="h1-div">About Me</h1>
         <p id="projectp" class="s-b-paragraph">
-
-            I completed primary school in my hometown in the city of Presheva, as well as high school. I started my higher studies in 2020 in Prishtina at the Faculty of Computer Science and Engineering.
-
-            Im a person who is ambitious and determined. I always tried to get a chance to improve myself. I am a organized person and every time I take various techniques to study and to make my work done. Also i'm very friendly and I enjoy interacting with others. It is nothing for me to have a conversation with strangers, I'm always comfortable with any of those. I want take risks and responsibility. Till now I have always been a leader to my school team and that was the reason which pushed me to become independent and persistent for myself also. My primary goal is to focus on result and moving toward with necessary steps.        </p>
+            <?php echo $data['RethMeje'] ?>
     </div>
     <!---Contact  Form-->
     <div id="contact-div">
@@ -270,13 +291,13 @@ I am presenting some projects that I have done during my short career as a progr
             <img src="./assets/img/rocket.png" alt="">
         </div>
         <h1 class="h1-div">Get In Touch</h1>
-        <form class="contactform">
-            <input type="text" placeholder="First Name"/>
-            <input type="text" placeholder="Last Name"/>
-            <input type="text" placeholder="Email Address"/>
-            <input type="text" placeholder="Phone No."/>
-            <input type="text" placeholder="Message"/>
-            <input type="button" value="Send Message">
+        <form class="contactform" method="POST">
+            <input name="emri" type="text" placeholder="First Name"/>
+            <input name="mbiemri" type="text" placeholder="Last Name"/>
+            <input name="email" type="text" placeholder="Email Address"/>
+            <input name="numri" type="text" placeholder="Phone No."/>
+            <input name="mesazhi" type="text" placeholder="Message"/>
+            <input type="submit" name="submit" type="button" value="Send Message">
         </form>
     </div>
     <!--Footer-->
@@ -290,7 +311,8 @@ I am presenting some projects that I have done during my short career as a progr
             <a target="_blank" href="https://instagram.com/arlindaliuu" class="fa mt-50 fa-instagram"></a>
             <p class="s-b-paragraph mtop">Copyright 2022. All Rights Reserved</p>
         </div>
+        <?php endforeach; ?>
     </footer>
-        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/script.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

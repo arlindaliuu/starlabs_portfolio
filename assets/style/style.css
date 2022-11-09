@@ -6,7 +6,7 @@
     font-family: 'Inter', sans-serif;
 }
 body{
-    background-image: url(../img/background1.jpg);    
+
 }
 .black{
     background-color: black;
@@ -440,18 +440,18 @@ input {
   .absolutep{
     position: absolute;
     animation: rocektanimation 4s linear infinite;
-    transform: rotate(125deg);
+    transform: rotate(305deg);
   }
   
   @keyframes rocektanimation{
     0% {
-        left: 0;
+        right: 0;
       }
       50%{
-        left: 50%;
+        right: 50%;
       }
       100% {
-        left: 100%;
+        right: 100%;
       }
       
   }
@@ -487,5 +487,34 @@ input {
   .fa:hover {
     opacity: 0.7;
   }
-  
+
+  /*dashboard */
+  table{
+    margin-top: 100px;
+  }
+  .tableheader th{
+    border: solid 1px black;
+    width: 250px;
+    height: 50px;
+    background-color: #121212;
+    color: white;
+  }
+  .userh1{
+    text-align: center;
+  }
+  #editbutton, #deletebutton{
+    width: 40%;
+    height: 40px;
+    border: 1px solid #ECEAED;
+  }
+  #editbutton{
+    background-color: #a58b18;
+  }
+  #deletebutton{
+    background-color: #c70202;
+    margin-left: 15%;
+  }
+  .tableheader td{
+    border: 1px solid  black;
+  }
   
