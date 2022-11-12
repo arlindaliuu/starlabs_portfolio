@@ -9,5 +9,6 @@ Pervec stilizimit dhe funksionaliteteve ne front te cilat kjo portfolio permban,
 Admini mund te qaset permes email dhe pwd.
 Pervec adminit askush nuk mund te kete qasje te hyje ne dashboard. Ne dashboard mund qe te editoni fshini nje te dhenat e Userit.
 Gjithashtu mund edhe te dergoni email permes Contact Form prej se ciles mesazhi juaj do te ruhet ne databazen tone.
+Databaza eshte krijuar ne localhost ne phpmyadmin. Mund ta gjeni ne file-n database.txt.
 
 //Enjoy your surfing!!!
