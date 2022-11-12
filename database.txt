@@ -6,10 +6,9 @@ ID int PRIMARY KEY IDENTITY(1, 1),
 Emri varchar(255) NOT NULL,
 Mbiemri varchar(255),
 Email varchar(255) NOT NULL,
-NumriTel varchar(255),
-AboutMe varchar(255),
+Bio varchar(255),
 Mosha int,
-Rethmeje varchar(255),
+RethMeje varchar(255),
 Roli int NOT NULL
 );
 
@@ -18,5 +17,6 @@ contactID int PRIMARY KEY IDENTITY(1, 1),
 Email varchar(255) NOT NULL,
 Emri varchar(255) NOT NULL,
 Mbiemri varchar(255),
-Subject varchar(255) NOT NULL
+NumriTel varchar(255),
+Mesazhi varchar(255) NOT NULL
 );
